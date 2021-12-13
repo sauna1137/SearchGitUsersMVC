@@ -8,7 +8,6 @@
 import UIKit
 
 extension UITableView {
-
     // Cellを登録する際に使用 CellのIdentifierは"Cell"にすること
     func registerCustomCell<T: UITableViewCell>(_ cellType: T.Type) {
         register(UINib(nibName: T.identifier, bundle: nil), forCellReuseIdentifier: "Cell")
