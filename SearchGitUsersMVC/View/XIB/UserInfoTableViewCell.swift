@@ -18,5 +18,7 @@ final class UserInfoTableViewCell: UITableViewCell {
         profileImageView.sd_setImage(with: URL(string: gitHubUsers[indexPath].imageURL), completed: nil)
         userNameLabel.text = gitHubUsers[indexPath].userName
         userTypeLabel.text = gitHubUsers[indexPath].type
+
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.height / 2
     }
 }
