@@ -10,6 +10,5 @@ target 'SearchGitUsersMVC' do
 pod 'Alamofire'
 pod 'SDWebImage'
 pod 'LicensePlist'
-pod 'IQKeyboardManagerSwift'
 
 end
