@@ -92,7 +92,7 @@
                 <outlet property="userNameLabel" destination="Itb-r8-FEl" id="m2d-Bz-7Jr"/>
                 <outlet property="userTypeLabel" destination="Gqg-io-ITF" id="qfO-lh-Cm6"/>
             </connections>
-            <point key="canvasLocation" x="205.79710144927537" y="164.0625"/>
+            <point key="canvasLocation" x="135" y="-27"/>
         </tableViewCell>
     </objects>
 </document>
