@@ -22,7 +22,7 @@ struct CodableForGitHubUsers: Codable {
 
     struct Items: Codable {
         let login: String
-        let id: Int
+        let userID: Int
         let nodeID: String
         let avatarURL: String
         let gravatarID: String
@@ -43,7 +43,7 @@ struct CodableForGitHubUsers: Codable {
 
          enum CodingKeys: String, CodingKey {
             case login = "login"
-            case id = "id"
+            case userID = "id"
             case nodeID = "node_id"
             case avatarURL = "avatar_url"
             case gravatarID = "gravatar_id"
