@@ -33,8 +33,9 @@ class ProfileViewController: UIViewController {
     }
 
     // ユーザー選択時にURLを受け取るためのメソッド
-    func passUserURLString(URLString: String) {
-        self.urlString = URLString
+    func passUserURLString(gitHubUser: GitHubUsers) {
+        urlString = gitHubUser.userURL
+        navigationItem.title = gitHubUser.userName
     }
 }
 
