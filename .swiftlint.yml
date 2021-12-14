@@ -13,10 +13,6 @@ excluded:
     - Pods
     - Generated
 
-identifier_name:
-    min_length:
-    warning: 1
-
 line_length:
     warning: 300
     error: 500
