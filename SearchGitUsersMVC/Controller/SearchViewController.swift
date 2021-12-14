@@ -22,6 +22,7 @@ final class SearchViewController: UIViewController {
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        fetchGitHubUsers.fetchGitHubUsersDelegate = self
 
         // Cell登録
         tableView.registerCustomCell(UserInfoTableViewCell.self)
@@ -36,23 +37,32 @@ final class SearchViewController: UIViewController {
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 
+        guard !searchBar.text!.isEmpty else {
+            present(UIAlertController().alert(title: "検索するユーザー名を入力してください", message: "", actATitle: "OK"),
+                    animated: true, completion: nil)
+            return
+        }
+
         if let searchText = searchBar.text {
             fetchGitHubUsers.fetchGitHubUsers(searchText: searchText) { users in
-
-                print(users.count)
-                print(users)
 
                 self.gitHubUsers = users
                 self.tableView.reloadData()
             }
             view.endEditing(true)
-        } else {
-            // TODO: アラート　文字を入力
         }
     }
 }
 
 extension SearchViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let profileVC = UIStoryboard.profileVC
+        profileVC.passUserURLString(URLString: gitHubUsers[indexPath.row].userURL)
+        tableView.deselectRow(at: indexPath, animated: true)
+        navigationController?.pushViewController(profileVC, animated: true)
+    }
 }
 
 extension SearchViewController: UITableViewDataSource {
@@ -66,5 +76,11 @@ extension SearchViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCustomCell(with: UserInfoTableViewCell.self)
         cell.setUpCell(gitHubUsers: gitHubUsers, indexPath: indexPath.row)
         return cell
+    }
+}
+
+extension SearchViewController: FetchGitHubUsersDelegate {
+    func presentAlert(content: String) {
+        present(UIAlertController().alert(title: content, message: "", actATitle: "OK"), animated: true, completion: nil)
     }
 }
