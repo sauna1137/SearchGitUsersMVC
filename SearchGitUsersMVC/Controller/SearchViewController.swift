@@ -52,6 +52,12 @@ extension SearchViewController: UISearchBarDelegate {
             view.endEditing(true)
         }
     }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        gitHubUsers.removeAll()
+        tableView.reloadData()
+    }
 }
 
 extension SearchViewController: UITableViewDelegate {
