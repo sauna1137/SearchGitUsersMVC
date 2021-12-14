@@ -11,22 +11,48 @@ import WebKit
 class ProfileViewController: UIViewController {
 
     private var webView = WKWebView()
+    private var indicatior = UIActivityIndicatorView()
     private var urlString = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // webViewのサイズを指定
-        webView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
-        view.addSubview(webView)
+        webView.navigationDelegate = self
 
         let urlForRequest = URL(string: urlString)
         let request = URLRequest(url: urlForRequest!)
         webView.load(request)
     }
 
+    override func viewDidLayoutSubviews() {
+        webView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        indicatior.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        indicatior.style = .medium
+        view.addSubview(webView)
+        view.addSubview(indicatior)
+    }
+
     // ユーザー選択時にURLを受け取るためのメソッド
     func passUserURLString(URLString: String) {
         self.urlString = URLString
+    }
+}
+
+extension ProfileViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        indicatior.startAnimating()
+    }
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        indicatior.stopAnimating()
+    }
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        indicatior.stopAnimating()
+        print(error.localizedDescription)
+        present(UIAlertController().alert(title: "予期せぬエラーが発生しました。", message: "", actATitle: "OK"), animated: true, completion: nil)
+    }
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        indicatior.stopAnimating()
+        print(error.localizedDescription)
+        present(UIAlertController().alert(title: "予期せぬエラーが発生しました。", message: "", actATitle: "OK"), animated: true, completion: nil)
     }
 }
