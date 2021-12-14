@@ -7,16 +7,16 @@
 
 import UIKit
 
-class UserInfoTableViewCell: UITableViewCell {
+final class UserInfoTableViewCell: UITableViewCell {
+
     @IBOutlet weak private var profileImageView: UIImageView!
     @IBOutlet weak private var userNameLabel: UILabel!
     @IBOutlet weak private var userTypeLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    // cellForRowAtで使用する　取得したGitHubUsersのデータをUIに反映させる
+    func setUpCell(gitHubUsers: [GitHubUsers], indexPath: Int) {
+        profileImageView.sd_setImage(with: URL(string: gitHubUsers[indexPath].imageURL), completed: nil)
+        userNameLabel.text = gitHubUsers[indexPath].userName
+        userTypeLabel.text = gitHubUsers[indexPath].type
     }
 }
