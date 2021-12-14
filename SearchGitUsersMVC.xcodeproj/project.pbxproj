@@ -14,7 +14,6 @@
 		8A7AAD4927672C9900E7E58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7AAD4727672C9900E7E58D /* LaunchScreen.storyboard */; };
 		8A7AAD5627674CDD00E7E58D /* SearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7AAD5527674CDD00E7E58D /* SearchView.storyboard */; };
 		8A7AAD5827674D0300E7E58D /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7AAD5727674D0300E7E58D /* ProfileView.storyboard */; };
-		8A7AAD5A27674DB700E7E58D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD5927674DB700E7E58D /* SearchViewController.swift */; };
 		8A7AAD5C27674DCE00E7E58D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD5B27674DCE00E7E58D /* ProfileViewController.swift */; };
 		8A7AAD612767505900E7E58D /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD5F2767505900E7E58D /* UserInfoTableViewCell.swift */; };
 		8A7AAD622767505900E7E58D /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7AAD602767505900E7E58D /* UserInfoTableViewCell.xib */; };
@@ -24,6 +23,9 @@
 		8A7AAD6B2767881000E7E58D /* CodableForGitHubUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD6A2767881000E7E58D /* CodableForGitHubUsers.swift */; };
 		8A7AAD6D276791CB00E7E58D /* FetchGitHubUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD6C276791CB00E7E58D /* FetchGitHubUsers.swift */; };
 		8A7AAD6F276797EF00E7E58D /* GitHubUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD6E276797EF00E7E58D /* GitHubUsers.swift */; };
+		8A7AAD992768A06100E7E58D /* UIStoryboard-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD982768A06100E7E58D /* UIStoryboard-Extension.swift */; };
+		8A7AAD9B2768A6AE00E7E58D /* UIAlertController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD9A2768A6AE00E7E58D /* UIAlertController-Extension.swift */; };
+		8A7AAD9D2768A8F300E7E58D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD9C2768A8F300E7E58D /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +39,6 @@
 		8A7AAD4A27672C9900E7E58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A7AAD5527674CDD00E7E58D /* SearchView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchView.storyboard; sourceTree = "<group>"; };
 		8A7AAD5727674D0300E7E58D /* ProfileView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
-		8A7AAD5927674DB700E7E58D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8A7AAD5B27674DCE00E7E58D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8A7AAD5F2767505900E7E58D /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
 		8A7AAD602767505900E7E58D /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		8A7AAD6A2767881000E7E58D /* CodableForGitHubUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableForGitHubUsers.swift; sourceTree = "<group>"; };
 		8A7AAD6C276791CB00E7E58D /* FetchGitHubUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchGitHubUsers.swift; sourceTree = "<group>"; };
 		8A7AAD6E276797EF00E7E58D /* GitHubUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsers.swift; sourceTree = "<group>"; };
+		8A7AAD982768A06100E7E58D /* UIStoryboard-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard-Extension.swift"; sourceTree = "<group>"; };
+		8A7AAD9A2768A6AE00E7E58D /* UIAlertController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController-Extension.swift"; sourceTree = "<group>"; };
+		8A7AAD9C2768A8F300E7E58D /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FB3B4AE8FC95DCAD81A80A9E /* Pods_SearchGitUsersMVC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchGitUsersMVC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,7 +139,7 @@
 		8A7AAD5427674CB100E7E58D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8A7AAD5927674DB700E7E58D /* SearchViewController.swift */,
+				8A7AAD9C2768A8F300E7E58D /* SearchViewController.swift */,
 				8A7AAD5B27674DCE00E7E58D /* ProfileViewController.swift */,
 			);
 			path = Controller;
@@ -165,6 +169,8 @@
 				8A7AAD642767562900E7E58D /* NSObjectProtocol-Extension.swift */,
 				8A7AAD662767565000E7E58D /* UITableViewCell-Extension.swift */,
 				8A7AAD682767571E00E7E58D /* UITableView-Extension.swift */,
+				8A7AAD982768A06100E7E58D /* UIStoryboard-Extension.swift */,
+				8A7AAD9A2768A6AE00E7E58D /* UIAlertController-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -305,13 +311,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A7AAD992768A06100E7E58D /* UIStoryboard-Extension.swift in Sources */,
 				8A7AAD6D276791CB00E7E58D /* FetchGitHubUsers.swift in Sources */,
 				8A7AAD612767505900E7E58D /* UserInfoTableViewCell.swift in Sources */,
+				8A7AAD9B2768A6AE00E7E58D /* UIAlertController-Extension.swift in Sources */,
 				8A7AAD6F276797EF00E7E58D /* GitHubUsers.swift in Sources */,
 				8A7AAD692767571E00E7E58D /* UITableView-Extension.swift in Sources */,
-				8A7AAD5A27674DB700E7E58D /* SearchViewController.swift in Sources */,
 				8A7AAD652767562900E7E58D /* NSObjectProtocol-Extension.swift in Sources */,
 				8A7AAD3D27672C9700E7E58D /* AppDelegate.swift in Sources */,
+				8A7AAD9D2768A8F300E7E58D /* SearchViewController.swift in Sources */,
 				8A7AAD5C27674DCE00E7E58D /* ProfileViewController.swift in Sources */,
 				8A7AAD672767565000E7E58D /* UITableViewCell-Extension.swift in Sources */,
 				8A7AAD3F27672C9700E7E58D /* SceneDelegate.swift in Sources */,
