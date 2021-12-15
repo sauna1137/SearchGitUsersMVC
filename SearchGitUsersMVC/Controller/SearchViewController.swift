@@ -13,8 +13,8 @@ final class SearchViewController: UIViewController {
     @IBOutlet weak private var searchBar: UISearchBar!
     @IBOutlet weak private var tableView: UITableView!
 
-    var fetchGitHubUsers = FetchGitHubUsers()
-    var gitHubUsers = [GitHubUsers]()
+    private var fetchGitHubUsers = FetchGitHubUsers()
+    private var gitHubUsers = [GitHubUsers]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,22 +34,22 @@ final class SearchViewController: UIViewController {
 }
 
 // MARK: - Extension
-extension SearchViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 
+// MARK: - UISearchBarDelegae
+extension SearchViewController: UISearchBarDelegate {
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // 検索時にキーワードがなければエラー
         guard !searchBar.text!.isEmpty else {
             present(UIAlertController().alert(title: "検索するユーザー名を入力してください", message: "", actATitle: "OK"),
                     animated: true, completion: nil)
             return
         }
-
-        if let searchText = searchBar.text {
-            fetchGitHubUsers.fetchGitHubUsers(searchText: searchText) { users in
-
-                self.gitHubUsers = users
-                self.tableView.reloadData()
-            }
-            view.endEditing(true)
+        // 検索バーのキーワードをもとにAPIを叩き受け取ったデータを元にtableViewを更新
+        fetchGitHubUsers.fetchGitHubUsers(searchText: searchBar.text!) { users in
+            self.gitHubUsers = users
+            self.tableView.reloadData()
+            self.view.endEditing(true)
         }
     }
 
@@ -60,6 +60,7 @@ extension SearchViewController: UISearchBarDelegate {
     }
 }
 
+// MARK: - UITableView
 extension SearchViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -85,6 +86,7 @@ extension SearchViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - Delegate
 extension SearchViewController: FetchGitHubUsersDelegate {
     func presentAlert(content: String) {
         present(UIAlertController().alert(title: content, message: "", actATitle: "OK"), animated: true, completion: nil)
