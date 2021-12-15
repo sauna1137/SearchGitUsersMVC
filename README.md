@@ -10,11 +10,17 @@ GitHubのユーザーを検索するアプリケーションをMVCで作成
 
 ## 開発で使用した技術
 ・MVCモデル開発
+
 ・JSON解析　Codable
+
 ・UIkit
+
 ・AutoLayout
+
 ・nabigationController
+
 ・tableViewController
+
 ・SwiftLint
 
  
@@ -46,14 +52,18 @@ import Alamofire
 #### ・あえて統一感なくStoryboardとコードで画面を構成しました
 ユーザー検索画面はStoryboard上で、GitHubユーザー画面ではコードで作成しました。
 
+
 #### ・様々な値渡しの実装
 デリゲートメソッド、クロージャ、メソッドでのファイル間の値渡しを実装しました。
+
 
 #### ・エクステンションの利用
 Storyboard,ViewController,TableViewCellのインスタンス化を簡潔にできるようにしました。
 
+
 #### ・カプセル化
 classやプロパティを可能な限りファイル内のみで使用できる様にしました。
+
 
 #### ・LaunchScreen
 何をするアプリか分かりやすくシンプルにデザインしました。
