@@ -26,6 +26,7 @@
 		8A7AAD992768A06100E7E58D /* UIStoryboard-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD982768A06100E7E58D /* UIStoryboard-Extension.swift */; };
 		8A7AAD9B2768A6AE00E7E58D /* UIAlertController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD9A2768A6AE00E7E58D /* UIAlertController-Extension.swift */; };
 		8A7AAD9D2768A8F300E7E58D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD9C2768A8F300E7E58D /* SearchViewController.swift */; };
+		8A7AADA2276976E900E7E58D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8A7AADA1276976E900E7E58D /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		8A7AAD982768A06100E7E58D /* UIStoryboard-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard-Extension.swift"; sourceTree = "<group>"; };
 		8A7AAD9A2768A6AE00E7E58D /* UIAlertController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController-Extension.swift"; sourceTree = "<group>"; };
 		8A7AAD9C2768A8F300E7E58D /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8A7AADA1276976E900E7E58D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = SearchGitUsersMVC/Settings.bundle; sourceTree = "<group>"; };
 		FB3B4AE8FC95DCAD81A80A9E /* Pods_SearchGitUsersMVC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchGitUsersMVC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 		8A7AAD3027672C9700E7E58D = {
 			isa = PBXGroup;
 			children = (
+				8A7AADA1276976E900E7E58D /* Settings.bundle */,
 				8A7AAD3B27672C9700E7E58D /* SearchGitUsersMVC */,
 				8A7AAD3A27672C9700E7E58D /* Products */,
 				6F7D59CF7D563AF3DE41202B /* Pods */,
@@ -188,6 +191,7 @@
 				8A7AAD3727672C9700E7E58D /* Resources */,
 				8A7AAD50276732F600E7E58D /* SwiftLint */,
 				3E0D43E6EC923065C3E71629 /* [CP] Embed Pods Frameworks */,
+				8A7AAD9E2769727E00E7E58D /* License Plist */,
 			);
 			buildRules = (
 			);
@@ -241,6 +245,7 @@
 				8A7AAD5827674D0300E7E58D /* ProfileView.storyboard in Resources */,
 				8A7AAD5627674CDD00E7E58D /* SearchView.storyboard in Resources */,
 				8A7AAD4627672C9900E7E58D /* Assets.xcassets in Resources */,
+				8A7AADA2276976E900E7E58D /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +286,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		8A7AAD9E2769727E00E7E58D /* License Plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "License Plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n${PODS_ROOT}/LicensePlist/license-plist --output-path $PRODUCT_NAME/Settings.bundle --github-token YOUR_GITHUB_TOKEN\nfi\n";
 		};
 		93A0BA3821A3329DD56720C0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
