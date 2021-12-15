@@ -39,7 +39,7 @@ import Alamofire
 
 ###　iPhone設定画面、当アプリの項目にてライセンス、ヴァージョン表示
 ・LicensePlist
-
+```
 
 ## アプリ作成においてのポイント
 #### ① あえて統一感なくStoryboardとコードで画面を構成しました
