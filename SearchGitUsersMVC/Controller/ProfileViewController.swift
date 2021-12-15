@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
 
     private var webView = WKWebView()
     private var indicatior = UIActivityIndicatorView()
@@ -39,6 +39,7 @@ class ProfileViewController: UIViewController {
     }
 }
 
+// インジケーターを表示するタイミングの指定
 extension ProfileViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         indicatior.startAnimating()
