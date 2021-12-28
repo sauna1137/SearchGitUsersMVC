@@ -65,7 +65,7 @@ extension SearchViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let profileVC = UIStoryboard.profileVC
+        let profileVC = UIStoryboard(name: "ProfileView", bundle: nil).instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
         profileVC.passUserURLString(gitHubUser: gitHubUsers[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
         navigationController?.pushViewController(profileVC, animated: true)
