@@ -8,12 +8,10 @@
 import UIKit
 
 extension UITableView {
-    // Cellを登録する際に使用 CellのIdentifierは"Cell"にすること
     func registerCustomCell<T: UITableViewCell>(_ cellType: T.Type) {
         register(UINib(nibName: T.identifier, bundle: nil), forCellReuseIdentifier: T.identifier)
     }
 
-    // dequeuReusableCustomCellとして登録する際のメソッド CellのIdentifierは"Cell"にすること
     func dequeueReusableCustomCell<T: UITableViewCell>(with cellType: T.Type) -> T {
         return dequeueReusableCell(withIdentifier: T.identifier) as! T
     }
