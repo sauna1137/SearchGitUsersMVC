@@ -15,8 +15,8 @@ final class UserInfoTableViewCell: UITableViewCell {
 
     // cellForRowAtで使用する　取得したGitHubUsersのデータをUIに反映させる
     func setUpCell(gitHubUsers: [GitHubUsers], indexPath: Int) {
-        profileImageView.sd_setImage(with: URL(string: gitHubUsers[indexPath].imageURL), completed: nil)
-        userNameLabel.text = gitHubUsers[indexPath].userName
+        profileImageView.sd_setImage(with: URL(string: gitHubUsers[indexPath].avatarURL), completed: nil)
+        userNameLabel.text = gitHubUsers[indexPath].login
         userTypeLabel.text = gitHubUsers[indexPath].type
 
         profileImageView.layer.cornerRadius = profileImageView.frame.size.height / 2
