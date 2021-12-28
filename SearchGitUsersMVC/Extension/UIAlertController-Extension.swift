@@ -9,7 +9,7 @@ import UIKit
 
 extension UIAlertController {
     // タイトルとメッセージを引数にして返すアラート
-    func alert(title: String, message: String, actATitle: String) -> UIAlertController {
+   static func alert(title: String, message: String, actATitle: String) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let actionA = UIAlertAction(title: actATitle, style: .default, handler: nil)
         alert.addAction(actionA)
