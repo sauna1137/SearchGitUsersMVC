@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct CodableForGitHubUsers: Codable {
+struct CodableForGitHubUsers: Decodable {
 
     let totalCount: Int
     let incompleteResults: Bool
-    let items: [Items]
+    let items: [GitHubUsers]
 
      enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
@@ -20,7 +20,7 @@ struct CodableForGitHubUsers: Codable {
     }
 }
 
-    struct Items: Codable {
+    struct GitHubUsers: Decodable {
         let login: String
         let userID: Int
         let nodeID: String
