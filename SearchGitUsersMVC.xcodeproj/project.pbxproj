@@ -23,7 +23,6 @@
 		8A7AAD6B2767881000E7E58D /* CodableForGitHubUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD6A2767881000E7E58D /* CodableForGitHubUsers.swift */; };
 		8A7AAD6D276791CB00E7E58D /* FetchGitHubUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD6C276791CB00E7E58D /* FetchGitHubUsers.swift */; };
 		8A7AAD6F276797EF00E7E58D /* GitHubUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD6E276797EF00E7E58D /* GitHubUsers.swift */; };
-		8A7AAD992768A06100E7E58D /* UIStoryboard-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD982768A06100E7E58D /* UIStoryboard-Extension.swift */; };
 		8A7AAD9B2768A6AE00E7E58D /* UIAlertController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD9A2768A6AE00E7E58D /* UIAlertController-Extension.swift */; };
 		8A7AAD9D2768A8F300E7E58D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7AAD9C2768A8F300E7E58D /* SearchViewController.swift */; };
 		8A7AADA2276976E900E7E58D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8A7AADA1276976E900E7E58D /* Settings.bundle */; };
@@ -49,7 +48,6 @@
 		8A7AAD6A2767881000E7E58D /* CodableForGitHubUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableForGitHubUsers.swift; sourceTree = "<group>"; };
 		8A7AAD6C276791CB00E7E58D /* FetchGitHubUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchGitHubUsers.swift; sourceTree = "<group>"; };
 		8A7AAD6E276797EF00E7E58D /* GitHubUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsers.swift; sourceTree = "<group>"; };
-		8A7AAD982768A06100E7E58D /* UIStoryboard-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard-Extension.swift"; sourceTree = "<group>"; };
 		8A7AAD9A2768A6AE00E7E58D /* UIAlertController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController-Extension.swift"; sourceTree = "<group>"; };
 		8A7AAD9C2768A8F300E7E58D /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8A7AADA1276976E900E7E58D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = SearchGitUsersMVC/Settings.bundle; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 				8A7AAD642767562900E7E58D /* NSObjectProtocol-Extension.swift */,
 				8A7AAD662767565000E7E58D /* UITableViewCell-Extension.swift */,
 				8A7AAD682767571E00E7E58D /* UITableView-Extension.swift */,
-				8A7AAD982768A06100E7E58D /* UIStoryboard-Extension.swift */,
 				8A7AAD9A2768A6AE00E7E58D /* UIAlertController-Extension.swift */,
 			);
 			path = Extension;
@@ -334,7 +331,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A7AAD992768A06100E7E58D /* UIStoryboard-Extension.swift in Sources */,
 				8A7AAD6D276791CB00E7E58D /* FetchGitHubUsers.swift in Sources */,
 				8A7AAD612767505900E7E58D /* UserInfoTableViewCell.swift in Sources */,
 				8A7AAD9B2768A6AE00E7E58D /* UIAlertController-Extension.swift in Sources */,
