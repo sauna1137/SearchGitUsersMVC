@@ -50,11 +50,11 @@ extension ProfileViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         indicatior.stopAnimating()
         print(error.localizedDescription)
-        present(UIAlertController().alert(title: "予期せぬエラーが発生しました。", message: "", actATitle: "OK"), animated: true, completion: nil)
+        present(UIAlertController.alert(title: "予期せぬエラーが発生しました。", message: "", actATitle: "OK"), animated: true, completion: nil)
     }
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         indicatior.stopAnimating()
         print(error.localizedDescription)
-        present(UIAlertController().alert(title: "予期せぬエラーが発生しました。", message: "", actATitle: "OK"), animated: true, completion: nil)
+        present(UIAlertController.alert(title: "予期せぬエラーが発生しました。", message: "", actATitle: "OK"), animated: true, completion: nil)
     }
 }

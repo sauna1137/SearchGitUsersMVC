@@ -41,7 +41,7 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         // 検索時にキーワードがなければエラー
         guard !searchBar.text!.isEmpty else {
-            present(UIAlertController().alert(title: "検索するユーザー名を入力してください", message: "", actATitle: "OK"),
+            present(UIAlertController.alert(title: "検索するユーザー名を入力してください", message: "", actATitle: "OK"),
                     animated: true, completion: nil)
             return
         }
@@ -89,6 +89,6 @@ extension SearchViewController: UITableViewDataSource {
 // MARK: - Delegate
 extension SearchViewController: FetchGitHubUsersDelegate {
     func presentAlert(content: String) {
-        present(UIAlertController().alert(title: content, message: "", actATitle: "OK"), animated: true, completion: nil)
+        present(UIAlertController.alert(title: content, message: "", actATitle: "OK"), animated: true, completion: nil)
     }
 }
